@@ -26,7 +26,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
   
   return (
     <motion.div 
-      className="glass-card p-6 rounded-xl hover-scale group relative overflow-hidden"
+      className="glass-card p-4 md:p-6 rounded-xl hover-scale group relative overflow-hidden h-full flex flex-col"
       style={{ animationDelay: `${0.2 + index * 0.05}s` }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -40,19 +40,19 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
       />
       
       {/* Skill icon */}
-      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-primary/20 relative">
-        <span className="text-primary text-xl font-medium">{skill.name.substring(0, 2)}</span>
+      <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-primary/20 relative">
+        <span className="text-primary text-lg md:text-xl font-medium">{skill.name.substring(0, 2)}</span>
         
         {/* Subtle circular pulse animation */}
         <div className="absolute inset-0 rounded-full border border-primary/30 animate-pulse-soft" />
       </div>
       
-      <h3 className="text-lg font-display font-bold mb-2 text-center">{skill.name}</h3>
+      <h3 className="text-base md:text-lg font-display font-bold mb-2 text-center">{skill.name}</h3>
       
-      <div className="mt-6 mb-2">
-        <div className="flex justify-between mb-1.5">
-          <span className="text-xs font-medium text-muted-foreground">Proficiency</span>
-          <span className="text-xs font-medium text-primary">{percentage}%</span>
+      <div className="mt-auto pt-4">
+        <div className="flex justify-between mb-1.5 text-xs">
+          <span className="font-medium text-muted-foreground">Proficiency</span>
+          <span className="font-medium text-primary">{percentage}%</span>
         </div>
         
         <Progress 
@@ -70,7 +70,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
       </div>
       
       {/* Experience indicators */}
-      <div className="flex justify-center mt-4 space-x-1">
+      <div className="flex justify-center mt-3 space-x-1">
         {[1, 2, 3, 4, 5].map((level) => (
           <div 
             key={level}
