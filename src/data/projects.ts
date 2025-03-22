@@ -7,6 +7,8 @@ export interface Project {
   demoUrl: string;
   githubUrl: string;
   technologies: string[];
+  tags?: string[]; // Make tags optional to maintain compatibility
+  date?: Date; // Add date for sorting functionality
 }
 
 export const projects: Project[] = [
@@ -17,7 +19,9 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1661956602868-6ae368943878?q=80&w=2670&auto=format&fit=crop",
     demoUrl: "https://example.com/demo1",
     githubUrl: "https://github.com/yourusername/ecommerce",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe API"]
+    technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
+    tags: ["Web App", "E-commerce", "Full Stack"],
+    date: new Date(2023, 11, 15)
   },
   {
     id: "project-2",
@@ -26,7 +30,9 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1611224885990-ab7363d7f2ed?q=80&w=2669&auto=format&fit=crop",
     demoUrl: "https://example.com/demo2",
     githubUrl: "https://github.com/yourusername/taskmanager",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"]
+    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    tags: ["Web App", "Productivity", "Frontend"],
+    date: new Date(2023, 9, 22)
   },
   {
     id: "project-3",
@@ -35,7 +41,9 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=2670&auto=format&fit=crop",
     demoUrl: "https://example.com/demo3",
     githubUrl: "https://github.com/yourusername/weatherapp",
-    technologies: ["React", "OpenWeather API", "Chart.js"]
+    technologies: ["React", "OpenWeather API", "Chart.js"],
+    tags: ["Web App", "Data Visualization", "API Integration"],
+    date: new Date(2023, 7, 5)
   },
   {
     id: "project-4",
@@ -44,6 +52,8 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1432888622747-4eb9a8f5a70d?q=80&w=2674&auto=format&fit=crop",
     demoUrl: "https://example.com/demo4",
     githubUrl: "https://github.com/yourusername/socialdashboard",
-    technologies: ["Angular", "D3.js", "Node.js", "Express"]
+    technologies: ["Angular", "D3.js", "Node.js", "Express"],
+    tags: ["Web App", "Data Visualization", "Full Stack"],
+    date: new Date(2023, 5, 18)
   }
 ];

@@ -26,6 +26,7 @@ const InteractiveGeometry: React.FC<GeometryProps> = ({
   rotationSpeed = [0.003, 0.002, 0.001]
 }) => {
   const mesh = useRef<THREE.Mesh>(null);
+  const [hovered, setHovered] = React.useState(false);
   
   useFrame((state, delta) => {
     if (mesh.current) {
@@ -36,6 +37,10 @@ const InteractiveGeometry: React.FC<GeometryProps> = ({
       
       // Add subtle floating motion
       mesh.current.position.y += Math.sin(state.clock.elapsedTime) * 0.001;
+      
+      // Apply subtle scale effect when hovered
+      const targetScale = hovered ? 1.1 : 1;
+      mesh.current.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
     }
   });
   
@@ -69,12 +74,20 @@ const InteractiveGeometry: React.FC<GeometryProps> = ({
       ref={mesh}
       position={position}
       rotation={rotation}
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
     >
       {geometry}
       {wireframe ? (
-        <meshBasicMaterial color={color} wireframe />
+        <meshBasicMaterial color={hovered ? new THREE.Color(color).offsetHSL(0, 0.1, 0.1) : color} wireframe />
       ) : (
-        <meshStandardMaterial color={color} roughness={0.3} metalness={0.2} />
+        <meshStandardMaterial 
+          color={hovered ? new THREE.Color(color).offsetHSL(0, 0.1, 0.1) : color} 
+          roughness={0.3} 
+          metalness={0.2} 
+          emissive={hovered ? color : undefined}
+          emissiveIntensity={hovered ? 0.2 : 0}
+        />
       )}
     </mesh>
   );
@@ -129,7 +142,7 @@ const Starfield: React.FC = () => {
 // Scene component that contains all 3D elements
 const Scene: React.FC = () => {
   useFrame(({ camera }) => {
-    // Slowly rotate the camera around the scene
+    // Smoothly rotate the camera around the scene
     camera.position.x = Math.sin(performance.now() / 10000) * 15;
     camera.position.z = Math.cos(performance.now() / 10000) * 15;
     camera.lookAt(0, 0, 0);
@@ -189,7 +202,7 @@ const ThreeScene: React.FC = () => {
         gl={{ 
           antialias: true,
           toneMapping: THREE.ACESFilmicToneMapping,
-          outputEncoding: THREE.sRGBEncoding
+          outputColorSpace: THREE.SRGBColorSpace // Updated from outputEncoding
         }}
       >
         <Scene />
