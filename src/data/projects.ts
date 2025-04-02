@@ -42,7 +42,7 @@ export const projects: Project[] = [
     description: "A calorie counter web app that searches for food and keeps tracks of your macros and calories, embedded with a nutritionist chatbot",
     imageUrl: "https://i.imgur.com/hKo5daE.jpg",
     demoUrl: "https://calorie-contra-testing-baf1376cc140.herokuapp.com/home",
-    githubUrl: "https://github.com/yourusername/calorie-counter",
+    githubUrl: "https://github.com/jericho1050/calorie-counter",
     technologies: ["Python", "Javascript", "Quart", "Heroku", "Bootstrap", "Gemini"],
     tags: ["Web App", "Health", "Full Stack"],
     date: new Date(2024, 9, 25)
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     description: "A simple to use social networking platform with real-time messaging and content sharing capabilities.",
     imageUrl: "https://i.imgur.com/11cb8WG.jpg",
     demoUrl: "https://hum.social",
-    githubUrl: "https://github.com/yourusername/hum-social",
+    githubUrl: "https://github.com/jericho1050/hum-social",
     technologies: ["Django", "Postgres", "Neon", "Javascript", "Bootstrap"],
     tags: ["Web App", "Social Media", "Full Stack"],
     date: new Date(2025, 4, 1)
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     description: "A management system and a educational platform focusing on calisthenics and fitness training",
     imageUrl: "https://i.imgur.com/oQ8dGva.jpg",
     demoUrl: "https://aestheitos.pro",
-    githubUrl: "https://github.com/yourusername/aestheitos",
+    githubUrl: "https://github.com/jericho1050/aestheitos",
     technologies: ["Vite", "Material UI", "React", "React Router", "Cypress", "Django Rest Framework", "Digital Ocean"],
     tags: ["Web App", "Education", "Fitness"],
     date: new Date(2024, 2, 13)
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     description: "A visually stunning landing page for a drone product, featuring smooth animations and interactive elements.",
     imageUrl: "https://i.imgur.com/dQn0bx3.jpg",
     demoUrl: "https://blue-island-0e5228800.5.azurestaticapps.net",
-    githubUrl: "https://github.com/yourusername/drone-landing",
+    githubUrl: "https://github.com/jericho1050/drone-landing",
     technologies: ["HTML", "CSS", "JavaScript", "Azure Static Web Apps"],
     tags: ["Frontend", "Landing Page"],
     date: new Date(2024, 11, 7)
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     description: "An application to search and view details about Pokemon using the Pokemon API.",
     imageUrl: "https://i.imgur.com/4kUiDBx.jpg",
     demoUrl: "https://pokemon-search-smoky.vercel.app/",
-    githubUrl: "https://github.com/yourusername/pokemon-search",
+    githubUrl: "https://github.com/jericho1050/pokemon-search",
     technologies: ["React", "PokeAPI", "Vercel", "CSS"],
     tags: ["Web App", "API Integration"],
     date: new Date(2024, 9, 6)
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     description: "A cash register application that calculates change and manages cash drawer contents.",
     imageUrl: "https://i.imgur.com/9OVvGmz.jpg",
     demoUrl: "https://mycash-register-webapp.netlify.app",
-    githubUrl: "https://github.com/yourusername/cash-register",
+    githubUrl: "https://github.com/jericho1050/cash-register",
     technologies: ["JavaScript", "HTML", "CSS", "Netlify"],
     tags: ["Web App", "Finance", "Tool"],
     date: new Date(2023, 3, 4)
