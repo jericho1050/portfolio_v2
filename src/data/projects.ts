@@ -225,17 +225,6 @@ export const projects: Project[] = [
     date: new Date(2024, 9, 4)
   },
   {
-    id: "project-20",
-    title: "llama-chatbot",
-    description: " Llama Chatbot with Sentiment Analysis Integration",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/llama-chatbot",
-    githubUrl: "https://github.com/jericho1050/llama-chatbot",
-    technologies: [],
-    tags: ["GitHub", "AI", "Chatbot", "NLP"],
-    date: new Date(2024, 11, 9)
-  },
-  {
     id: "project-21",
     title: "RustyTasks",
     description: "A command line to-do app written in Rust",
@@ -267,17 +256,6 @@ export const projects: Project[] = [
     technologies: ["Python", "Flask"],
     tags: ["GitHub", "Backend", "Web App", "CRUD"],
     date: new Date(2024, 6, 21)
-  },
-  {
-    id: "project-24",
-    title: "pokemon-search",
-    description: "An app that will search for Pokémon by name or ID and display the results to the user.",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/pokemon-search",
-    githubUrl: "https://github.com/jericho1050/pokemon-search",
-    technologies: ["CSS", "React", "PokeAPI", "Vercel"],
-    tags: ["GitHub", "Web App", "API Integration"],
-    date: new Date(2024, 1, 27)
   },
   {
     id: "project-25",
@@ -401,28 +379,6 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 29)
   },
   {
-    id: "project-36",
-    title: "drone-landingpage",
-    description: "Drone Landing page figma to code practice (Web Design by Gary Simon from scrimba)",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/drone-landingpage",
-    githubUrl: "https://github.com/jericho1050/drone-landingpage",
-    technologies: ["CSS", "HTML", "JavaScript"],
-    tags: ["GitHub", "Frontend", "Landing Page", "Figma"],
-    date: new Date(2024, 4, 19)
-  },
-  {
-    id: "project-37",
-    title: "Aestheitos",
-    description: "An online learning platform and management system offering training courses or programs for fitness and calisthenics",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/Aestheitos",
-    githubUrl: "https://github.com/jericho1050/Aestheitos",
-    technologies: ["JavaScript", "React", "Django Rest Framework"],
-    tags: ["GitHub", "Web App", "Education", "Fitness", "Full Stack"],
-    date: new Date(2024, 9, 1)
-  },
-  {
     id: "project-38",
     title: "car-sales-site",
     description: "A Responsive Cars site layout ( Figma -> code )",
@@ -454,17 +410,6 @@ export const projects: Project[] = [
     technologies: ["CSS", "HTML"],
     tags: ["GitHub", "Frontend", "Landing Page", "UI", "Figma"],
     date: new Date(2024, 2, 12)
-  },
-  {
-    id: "project-41",
-    title: "hum-network",
-    description: "A simple social network platform",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/hum-network",
-    githubUrl: "https://github.com/jericho1050/hum-network",
-    technologies: ["Python", "Django"],
-    tags: ["GitHub", "Web App", "Social Media", "Full Stack"],
-    date: new Date(2024, 0, 17)
   },
   {
     id: "project-42",

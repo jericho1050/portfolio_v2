@@ -1,9 +1,32 @@
-
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, Environment } from "@react-three/drei";
 import * as THREE from "three";
 import { createGeometricShape, createStarfield } from "../lib/three-utils";
+
+// New SceneTooltip component
+const SceneTooltip: React.FC<{ isHovering: boolean }> = ({ isHovering }) => {
+  return (
+    <div 
+      className={`
+        absolute top-4 left-0 right-0 mx-auto w-max
+        bg-black/70 text-white rounded-md px-4 py-3 shadow-lg backdrop-blur-sm 
+        transform transition-all duration-300 pointer-events-none
+        opacity-90 translate-y-0
+      `}
+    >
+      <div className="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+          <path d="M15 15s1-1 2-1 2 1 2 1"></path>
+          <path d="M9 15s-1-1-2-1-2 1-2 1"></path>
+          <circle cx="12" cy="12" r="9"></circle>
+          <line x1="12" y1="9" x2="12" y2="12"></line>
+        </svg>
+        <p className="font-medium text-sm">Click and drag to interact with the scene</p>
+      </div>
+    </div>
+  );
+};
 
 interface GeometryProps {
   position: [number, number, number];
@@ -194,8 +217,14 @@ const Scene: React.FC = () => {
 
 // Main ThreeScene component
 const ThreeScene: React.FC = () => {
+  const [isHovering, setIsHovering] = useState(false);
+  
   return (
-    <div className="three-container">
+    <div 
+      className="three-container relative"
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
       <div className="three-inner">
         <Canvas 
           shadows 
@@ -209,6 +238,7 @@ const ThreeScene: React.FC = () => {
           <Scene />
         </Canvas>
       </div>
+      {isHovering && <SceneTooltip isHovering={isHovering} />}
     </div>
   );
 };
