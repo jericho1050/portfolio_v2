@@ -1,84 +1,159 @@
-
-import React, { useState } from "react";
+import React from "react";
 import { Send, CheckCircle } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useToast } from "@/components/ui/use-toast";
+
+// Define schema with Zod
+const contactFormSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Please enter a valid email"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const Contact: React.FC = () => {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
+  const { toast } = useToast();
+  
+  // Form setup with React Hook Form and Zod validation
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
+
+  const { formState } = form;
+  const { isSubmitting, isSubmitSuccessful } = formState;
   
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormState((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: "",
-      }));
-    }
-  };
-  
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
-    
-    if (!formState.name.trim()) {
-      newErrors.name = "Name is required";
-    }
-    
-    if (!formState.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formState.email)) {
-      newErrors.email = "Please enter a valid email";
-    }
-    
-    if (!formState.message.trim()) {
-      newErrors.message = "Message is required";
-    } else if (formState.message.length < 10) {
-      newErrors.message = "Message must be at least 10 characters";
-    }
-    
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-    
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({
-        name: "",
-        email: "",
-        message: "",
+  async function onSubmit(data: ContactFormValues) {
+    try {
+      // Check if environment variables are defined
+      if (!import.meta.env.VITE_SERVERLESS_API_URL) {
+        throw new Error("API URL is not configured");
+      }
+
+      // Format data to match serverless function expectations
+      const formattedData = {
+        title: data.name,
+        email: data.email,
+        message: data.message
+      };
+
+      console.log("Sending data:", formattedData);
+
+      // Send form data to the serverless function endpoint
+      const response = await fetch(import.meta.env.VITE_SERVERLESS_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": import.meta.env.VITE_AUTHENTICATION_TOKEN 
+            ? `Basic ${import.meta.env.VITE_AUTHENTICATION_TOKEN}` 
+            : ""
+        },
+        body: JSON.stringify(formattedData),
+      });
+
+      console.log("Response status:", response.status);
+      
+      // Check if the response was successful first
+      if (!response.ok) {
+        // Special handling for different error scenarios
+        let errorMessage = `Failed with status: ${response.status}`;
+        
+        try {
+          // Try to get response content as text first
+          const responseText = await response.text();
+          console.log("Error response text:", responseText);
+          
+          // If it's JSON, parse it
+          if (responseText && responseText.trim().startsWith('{')) {
+            const errorData = JSON.parse(responseText);
+            errorMessage = errorData.message || errorMessage;
+          } else if (responseText) {
+            // Plain text error
+            errorMessage = responseText;
+          }
+        } catch (parseError) {
+          console.error("Error parsing error response:", parseError);
+        }
+        
+        throw new Error(errorMessage);
+      }
+      
+      // For successful responses, handle empty responses as success
+      let responseText;
+      try {
+        responseText = await response.text();
+        console.log("Raw response:", responseText);
+      } catch (e) {
+        console.warn("Couldn't read response text:", e);
+      }
+      
+      // Handle empty response case (which seems to be happening)
+      if (!responseText || responseText.trim() === "") {
+        console.log("Empty response received, treating as success");
+        toast({
+          title: "Success",
+          description: "Your message has been sent successfully."
+        });
+        return;
+      }
+      
+      // Try to parse JSON if there's content
+      try {
+        if (responseText) {
+          const result = JSON.parse(responseText);
+          console.log("Parsed response:", result);
+          
+          // Show success or error message based on the result
+          if (result.success === false) {
+            throw new Error(result.message || "Failed to send message");
+          }
+        }
+      } catch (parseError) {
+        console.warn("Response wasn't valid JSON but request succeeded:", parseError);
+        // Non-JSON response with OK status is still treated as success
+      }
+      
+      // If we made it here, consider it a success
+      toast({
+        title: "Success",
+        description: "Your message has been sent successfully."
       });
       
-      // Reset submission state after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to send message",
+      });
+    }
+  }
+  
+  // Reset form after 5 seconds of successful submission
+  React.useEffect(() => {
+    let resetTimer: NodeJS.Timeout;
+    
+    if (isSubmitSuccessful) {
+      resetTimer = setTimeout(() => {
+        form.reset();
       }, 5000);
-    }, 1500);
-  };
+    }
+    
+    return () => {
+      clearTimeout(resetTimer);
+    };
+  }, [isSubmitSuccessful, form]);
   
   return (
     <section id="contact" className="bg-secondary/30 py-24">
@@ -96,7 +171,7 @@ const Contact: React.FC = () => {
         
         <div className="max-w-2xl mx-auto">
           <div className="glass-card rounded-xl p-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            {isSubmitted ? (
+            {isSubmitSuccessful ? (
               <div className="text-center py-10">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-6">
                   <CheckCircle size={32} />
@@ -107,82 +182,67 @@ const Contact: React.FC = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
                       name="name"
-                      value={formState.name}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.name ? "border-red-400" : "border-border"
-                      } focus:outline-none focus:ring-2 focus:ring-primary/50`}
-                      placeholder="Your name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your name" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                    {errors.name && (
-                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
-                    )}
+                    
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input type="email" placeholder="your.email@example.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                   </div>
                   
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formState.email}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.email ? "border-red-400" : "border-border"
-                      } focus:outline-none focus:ring-2 focus:ring-primary/50`}
-                      placeholder="your.email@example.com"
-                    />
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
-                    )}
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
+                  <FormField
+                    control={form.control}
                     name="message"
-                    value={formState.message}
-                    onChange={handleChange}
-                    rows={6}
-                    className={`w-full px-4 py-3 rounded-lg border ${
-                      errors.message ? "border-red-400" : "border-border"
-                    } focus:outline-none focus:ring-2 focus:ring-primary/50`}
-                    placeholder="Your message..."
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea rows={6} placeholder="Your message..." {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                  {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">{errors.message}</p>
-                  )}
-                </div>
-                
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="btn-primary w-full flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    <span className="inline-block w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin mr-2"></span>
-                  ) : (
-                    <Send size={18} className="mr-2" />
-                  )}
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </button>
-              </form>
+                  
+                  <Button type="submit" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <span className="inline-block w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin mr-2"></span>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send size={18} className="mr-2" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </Form>
             )}
           </div>
         </div>

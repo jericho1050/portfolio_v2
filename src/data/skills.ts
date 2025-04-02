@@ -5,34 +5,59 @@ export interface Skill {
   level: number; // 1-5
 }
 
-export type SkillCategory = 'frontend' | 'backend' | 'tools' | 'other';
+export type SkillCategory = 'frontend' | 'backend' | 'cloud' | 'tools' | 'other';
 
 export const skills: Skill[] = [
   // Frontend
-  { name: "React", icon: "react", category: "frontend", level: 5 },
-  { name: "TypeScript", icon: "typescript", category: "frontend", level: 4 },
-  { name: "JavaScript", icon: "javascript", category: "frontend", level: 5 },
-  { name: "HTML5", icon: "html", category: "frontend", level: 5 },
-  { name: "CSS3", icon: "css", category: "frontend", level: 5 },
-  { name: "Tailwind CSS", icon: "tailwind", category: "frontend", level: 4 },
-  { name: "Three.js", icon: "threejs", category: "frontend", level: 3 },
+  { name: "React", icon: "React", category: "frontend", level: 4 },
+  { name: "TypeScript", icon: "Typescript", category: "frontend", level: 4 },
+  { name: "JavaScript", icon: "Javascript", category: "frontend", level: 4 },
+  { name: "HTML5", icon: "Html5", category: "frontend", level: 5 },
+  { name: "CSS3", icon: "Css3", category: "frontend", level: 4 },
+  { name: "Tailwind CSS", icon: "Tailwindcss", category: "frontend", level: 4 },
+  { name: "Three.js", icon: "Threejs", category: "frontend", level: 2 },
+  { name: "Next.js", icon: "Nextjs", category: "frontend", level: 4 },
+  { name: "Vite", icon: "Vite", category: "frontend", level: 3 },
+  { name: "Material UI", icon: "MaterialUi", category: "frontend", level: 3 },
+  { name: "React Router", icon: "Reactrouter", category: "frontend", level: 3 },
+  { name: "Bootstrap", icon: "Bootstrap", category: "frontend", level: 3 },
   
   // Backend
-  { name: "Node.js", icon: "nodejs", category: "backend", level: 4 },
-  { name: "Express", icon: "express", category: "backend", level: 4 },
-  { name: "MongoDB", icon: "mongodb", category: "backend", level: 3 },
-  { name: "PostgreSQL", icon: "postgresql", category: "backend", level: 3 },
-  { name: "GraphQL", icon: "graphql", category: "backend", level: 2 },
+  { name: "Django", icon: "Django", category: "backend", level: 4 },
+  { name: "Django Rest Framework", icon: "Django", category: "backend", level: 4 },
+  { name: "Flask", icon: "Flask", category: "backend", level: 4 },
+  { name: "FastAPI", icon: "Fastapi", category: "backend", level: 4 },
+  { name: "Quart", icon: "Python", category: "backend", level: 3 },
+  { name: "Node.js", icon: "Nodejs", category: "backend", level: 3 },
+  { name: "Express", icon: "Express", category: "backend", level: 3 },
+  { name: "MongoDB", icon: "Mongodb", category: "backend", level: 3 },
+  { name: "PostgreSQL", icon: "Postgresql", category: "backend", level: 3 },
+  { name: "Sqlite", icon: "Sqlite", category: "backend", level: 3 },
+  { name: "GraphQL", icon: "Graphql", category: "backend", level: 2 },
+  { name: "Web3.js", icon: "Web3Dotjs", category: "backend", level: 2 },
+  
+  // Cloud
+  { name: "AWS", icon: "Amazonaws", category: "tools", level: 3 },
+  { name: "Heroku", icon: "Heroku", category: "cloud", level: 3 },
+  { name: "Neon", icon: "Neon", category: "cloud", level: 3 },
+  { name: "Digital Ocean", icon: "Digitalocean", category: "cloud", level: 3 },
+  { name: "Azure Static Web Apps", icon: "Microsoftazure", category: "cloud", level: 3 },
+  { name: "Azure", icon: "Microsoftazure", category: "cloud", level: 3 },
+  { name: "Netlify", icon: "Netlify", category: "cloud", level: 3 },
+  { name: "Vercel", icon: "Vercel", category: "cloud", level: 3 },
+  { name: "Together Ai", icon: "Openai", category: "cloud", level: 3 },
   
   // Tools
-  { name: "Git", icon: "git", category: "tools", level: 4 },
-  { name: "Docker", icon: "docker", category: "tools", level: 3 },
-  { name: "AWS", icon: "aws", category: "tools", level: 2 },
+  { name: "Git", icon: "Git", category: "tools", level: 4 },
+  { name: "Docker", icon: "Docker", category: "tools", level: 3 },
+  { name: "Nvim", icon: "Neovim", category: "tools", level: 3 },
+  { name: "Github Copilot", icon: "Github", category: "tools", level: 3 },
   
   // Other
-  { name: "Figma", icon: "figma", category: "other", level: 3 },
-  { name: "Testing", icon: "testing", category: "other", level: 3 },
-  { name: "UI/UX", icon: "ux", category: "other", level: 4 }
+  { name: "Photoshop", icon: "Adobephotoshop", category: "other", level: 4 },
+  { name: "Figma", icon: "Figma", category: "other", level: 3 },
+  { name: "Testing", icon: "Jest", category: "other", level: 3 },
+  { name: "UI/UX", icon: "Framer", category: "other", level: 3 }
 ];
 
 export const getSkillsByCategory = (category: SkillCategory) => {

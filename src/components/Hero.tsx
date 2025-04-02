@@ -1,4 +1,3 @@
-
 import React from "react";
 import ThreeScene from "./ThreeScene";
 import { ChevronDown } from "lucide-react";
@@ -21,6 +20,9 @@ const Hero: React.FC = () => {
             <p className="text-base md:text-lg text-muted-foreground max-w-lg mb-8">
               I craft elegant solutions using modern technologies, focused on
               performance, accessibility, and exceptional user experiences.
+              <br />
+              <br />
+              <strong>By Jericho Wenzel</strong>
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#projects" className="btn-primary">

@@ -28,6 +28,15 @@ import {
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "./ui/pagination";
 
 // Get unique categories from all projects
 const getAllCategories = () => {
@@ -41,13 +50,15 @@ const getAllTechnologies = () => {
   return Array.from(new Set(technologies));
 };
 
-type SortOption = "newest" | "oldest" | "name";
+type SortOption = "newest" | "oldest" | "name" | null;
 
 const Projects: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTech, setSelectedTech] = useState<string[]>([]);
-  const [sortOption, setSortOption] = useState<SortOption>("newest");
+  const [sortOption, setSortOption] = useState<SortOption>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 6; // Number of projects to display per page
   
   const categories = useMemo(() => getAllCategories(), []);
   const technologies = useMemo(() => getAllTechnologies(), []);
@@ -88,6 +99,62 @@ const Projects: React.FC = () => {
       });
   }, [searchTerm, selectedCategory, selectedTech, sortOption]);
 
+  // Pagination logic
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
+
+  // Generate page numbers for pagination
+  const pageNumbers = useMemo(() => {
+    const pages = [];
+    const maxVisiblePages = 5; // Maximum number of page links to show
+
+    if (totalPages <= maxVisiblePages) {
+      // If total pages are less than max visible, show all pages
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Always show first page
+      pages.push(1);
+
+      // Calculate start and end of middle pages
+      let startPage = Math.max(currentPage - 1, 2);
+      let endPage = Math.min(currentPage + 1, totalPages - 1);
+
+      // Adjust if we're near the beginning
+      if (currentPage <= 3) {
+        endPage = Math.min(4, totalPages - 1);
+      }
+
+      // Adjust if we're near the end
+      if (currentPage >= totalPages - 2) {
+        startPage = Math.max(totalPages - 3, 2);
+      }
+
+      // Add ellipsis after first page if needed
+      if (startPage > 2) {
+        pages.push("ellipsis-start");
+      }
+
+      // Add middle pages
+      for (let i = startPage; i <= endPage; i++) {
+        pages.push(i);
+      }
+
+      // Add ellipsis before last page if needed
+      if (endPage < totalPages - 1) {
+        pages.push("ellipsis-end");
+      }
+
+      // Always show last page
+      pages.push(totalPages);
+    }
+
+    return pages;
+  }, [currentPage, totalPages]);
+
   // Handle technology selection
   const toggleTech = (tech: string) => {
     setSelectedTech(prev => 
@@ -95,6 +162,7 @@ const Projects: React.FC = () => {
         ? prev.filter(t => t !== tech) 
         : [...prev, tech]
     );
+    setCurrentPage(1); // Reset to first page when filter changes
   };
 
   // Clear all filters
@@ -103,6 +171,14 @@ const Projects: React.FC = () => {
     setSelectedCategory("All");
     setSelectedTech([]);
     setSortOption("newest");
+    setCurrentPage(1); // Reset to first page
+  };
+
+  // Handle page change
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    // Scroll to top of projects section
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
@@ -119,7 +195,7 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Enhanced search and filter bar */}
-        <div className="bg-white/50 backdrop-blur-md rounded-xl p-4 mb-10 max-w-4xl mx-auto shadow-sm border border-white/20">
+        <div className="bg-white/50 backdrop-blur-md rounded-xl p-4 mb-10  mx-auto shadow-sm border border-white/20">
           <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
@@ -262,11 +338,62 @@ const Projects: React.FC = () => {
             <Button onClick={clearFilters}>Clear All Filters</Button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {filteredProjects.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+              {currentProjects.map((project, index) => (
+                <ProjectCard 
+                  key={project.id} 
+                  project={project} 
+                  index={index} 
+                />
+              ))}
+            </div>
+            
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-12">
+                <Pagination>
+                  <PaginationContent>
+                    {currentPage > 1 && (
+                      <PaginationItem>
+                        <PaginationPrevious 
+                          onClick={() => handlePageChange(currentPage - 1)} 
+                          className="cursor-pointer"
+                        />
+                      </PaginationItem>
+                    )}
+                    
+                    {pageNumbers.map((page, index) => (
+                      typeof page === 'number' ? (
+                        <PaginationItem key={index}>
+                          <PaginationLink 
+                            onClick={() => handlePageChange(page)}
+                            isActive={currentPage === page}
+                            className="cursor-pointer"
+                          >
+                            {page}
+                          </PaginationLink>
+                        </PaginationItem>
+                      ) : (
+                        <PaginationItem key={index}>
+                          <PaginationEllipsis />
+                        </PaginationItem>
+                      )
+                    ))}
+                    
+                    {currentPage < totalPages && (
+                      <PaginationItem>
+                        <PaginationNext 
+                          onClick={() => handlePageChange(currentPage + 1)} 
+                          className="cursor-pointer"
+                        />
+                      </PaginationItem>
+                    )}
+                  </PaginationContent>
+                </Pagination>
+              </div>
+            )}
+          </>
         )}
       </div>
     </section>

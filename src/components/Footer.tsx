@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Facebook } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -8,15 +7,15 @@ const Footer: React.FC = () => {
       <div className="section-container">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h3 className="text-xl font-display font-bold">Portfolio</h3>
+            <h3 className="text-xl font-display font-bold">Jericho Wenzel Serrano</h3>
             <p className="text-muted-foreground mt-2">
-              Building digital experiences with precision and purpose
+              A Fullstack Developer
             </p>
           </div>
           
           <div className="flex space-x-4">
             <a
-              href="https://github.com/"
+              href="https://github.com/jericho1050"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-colors duration-300"
@@ -25,7 +24,7 @@ const Footer: React.FC = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/jericho-wenzel-serrano-b6b9a22a3/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-colors duration-300"
@@ -34,16 +33,16 @@ const Footer: React.FC = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://www.facebook.com/madanihon/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-colors duration-300"
-              aria-label="Twitter"
+              aria-label="Facebook"
             >
-              <Twitter size={20} />
+              <Facebook size={20} />
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:jerichokunserrano@gmail.com"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-colors duration-300"
               aria-label="Email"
             >
@@ -54,7 +53,7 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Portfolio. All rights reserved.
+            &copy; {new Date().getFullYear()} Jericho Wenzel Serrano. All rights reserved.
           </p>
           
           <div className="flex space-x-6">

@@ -1,7 +1,7 @@
-
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Award } from "lucide-react";
 import { Project } from "../data/projects";
+import { Badge } from "./ui/badge";
 
 interface ProjectCardProps {
   project: Project;
@@ -11,9 +11,21 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   return (
     <div 
-      className="glass-card rounded-xl overflow-hidden hover-scale animate-fade-in"
+      className="glass-card rounded-xl overflow-hidden hover-scale animate-fade-in relative"
       style={{ animationDelay: `${0.2 + index * 0.1}s` }}
     >
+      {project.achievement && (
+        <div className="absolute top-3 right-3 z-10">
+          <Badge 
+            variant="default" 
+            className="bg-gradient-to-br from-amber-400 to-amber-600 text-white text-xs flex items-center gap-1 font-semibold shadow-lg px-2.5 py-1 border border-amber-700/50 rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl"
+          >
+            <Award size={12} className="text-white" />
+            {project.achievement}
+          </Badge>
+        </div>
+      )}
+      
       <div className="relative aspect-video overflow-hidden">
         <img
           src={project.imageUrl}

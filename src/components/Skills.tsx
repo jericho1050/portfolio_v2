@@ -11,6 +11,7 @@ const Skills: React.FC = () => {
   const categories: { id: SkillCategory; label: string }[] = [
     { id: "frontend", label: "Frontend" },
     { id: "backend", label: "Backend" },
+    { id: "cloud", label: "Cloud" },
     { id: "tools", label: "Tools" },
     { id: "other", label: "Other" },
   ];

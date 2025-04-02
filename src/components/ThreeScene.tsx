@@ -196,17 +196,19 @@ const Scene: React.FC = () => {
 const ThreeScene: React.FC = () => {
   return (
     <div className="three-container">
-      <Canvas 
-        shadows 
-        dpr={[1, 2]} 
-        gl={{ 
-          antialias: true,
-          toneMapping: THREE.ACESFilmicToneMapping,
-          outputColorSpace: THREE.SRGBColorSpace // Updated from outputEncoding
-        }}
-      >
-        <Scene />
-      </Canvas>
+      <div className="three-inner">
+        <Canvas 
+          shadows 
+          dpr={[1, 2]} 
+          gl={{ 
+            antialias: true,
+            toneMapping: THREE.ACESFilmicToneMapping,
+            outputColorSpace: THREE.SRGBColorSpace // Updated from outputEncoding
+          }}
+        >
+          <Scene />
+        </Canvas>
+      </div>
     </div>
   );
 };

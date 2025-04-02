@@ -1,8 +1,61 @@
-
 import React, { useState } from "react";
 import { Skill } from "../data/skills";
 import { Progress } from "./ui/progress";
 import { motion } from "framer-motion";
+// Import correct icon components from react-icons
+import { 
+  SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss,
+  SiNextdotjs, SiVite, SiMui, SiNodedotjs, SiExpress, SiMongodb,
+  SiPostgresql, SiSqlite, SiGraphql, SiDjango, SiFlask, SiFastapi,
+  SiAmazon, SiHeroku, SiDigitalocean, SiNetlify, SiVercel,
+  SiGit, SiDocker, SiNeovim, SiGithub, SiAdobephotoshop, SiFigma, SiJest, SiFramer,
+  SiPython, SiOpenai, SiThreedotjs, SiBootstrap
+} from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
+
+// Icon mapping for all skills with correct names
+const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
+  React: SiReact,
+  Typescript: SiTypescript,
+  Javascript: SiJavascript,
+  Html5: SiHtml5,
+  Css3: SiCss3,
+  Tailwindcss: SiTailwindcss,
+  Threejs: SiThreedotjs,
+  Nextjs: SiNextdotjs,
+  Vite: SiVite,
+  MaterialUi: SiMui,
+  Reactrouter: SiReact,
+  Bootstrap: SiBootstrap,
+  Django: SiDjango,
+  Flask: SiFlask,
+  Fastapi: SiFastapi,
+  Python: SiPython,
+  Nodejs: SiNodedotjs,
+  Express: SiExpress,
+  Mongodb: SiMongodb,
+  Postgresql: SiPostgresql,
+  Sqlite: SiSqlite,
+  Graphql: SiGraphql,
+  Web3Dotjs: SiJavascript,
+  Amazonaws: SiAmazon,
+  Heroku: SiHeroku,
+  Neon: SiPostgresql,
+  Digitalocean: SiDigitalocean,
+  Microsoftazure: VscAzure,
+  Azure: VscAzure,
+  Netlify: SiNetlify,
+  Vercel: SiVercel,
+  Openai: SiOpenai,
+  Git: SiGit,
+  Docker: SiDocker,
+  Neovim: SiNeovim,
+  Github: SiGithub,
+  Adobephotoshop: SiAdobephotoshop,
+  Figma: SiFigma,
+  Jest: SiJest,
+  Framer: SiFramer,
+};
 
 interface SkillCardProps {
   skill: Skill;
@@ -23,6 +76,17 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
     if (level === 2) return "Basic";
     return "Beginner";
   };
+
+  // Get the appropriate icon component or fallback to first two letters
+  const renderIcon = () => {
+    const IconComponent = iconMap[skill.icon];
+    
+    if (IconComponent) {
+      return <IconComponent className="text-primary w-8 h-8" />;
+    }
+    
+    return <span className="text-primary text-xl font-semibold">{skill.name.substring(0, 2)}</span>;
+  };
   
   return (
     <motion.div 
@@ -41,8 +105,8 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
       
       {/* Skill icon */}
       <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-primary/20 relative">
-        <span className="text-primary text-lg md:text-xl font-medium">{skill.name.substring(0, 2)}</span>
-        
+        {renderIcon()}
+
         {/* Subtle circular pulse animation */}
         <div className="absolute inset-0 rounded-full border border-primary/30 animate-pulse-soft" />
       </div>
@@ -60,12 +124,10 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
           className="h-2 bg-secondary/50" 
         />
         
-        <div className="flex justify-between mt-1 text-xs text-muted-foreground">
-          <span>Beginner</span>
+        <div className="flex justify-center mt-1 text-muted-foreground text-xs ">
           <span className={`transition-colors duration-300 ${skill.level >= 3 ? "text-primary font-medium" : ""}`}>
             {getSkillLabel(skill.level)}
           </span>
-          <span>Expert</span>
         </div>
       </div>
       
