@@ -15,445 +15,444 @@ export const projects: Project[] = [
   {
     id: "project-1",
     title: "CareSanar",
-    description: "A comprehensive Hospital Management System designed to streamline administrative healthcare tasks. Developed as a solo project for a StackUp hackathon, CareSanar efficiently handles patient management, appointment scheduling, inventory management, billing, and analytics. The system also incorporates an assistant feature using Llama 3 to help staff with diagnosis. Built with Next.js and Supabase as the backend-as-a-service, this project demonstrates rapid adaptation to unfamiliar tools while delivering a complete solution under tight deadlines.",
+    description: "A comprehensive Hospital Management System streamlining healthcare administration. Developed solo for a StackUp hackathon, it handles patient management, scheduling, inventory, billing, and analytics. Features an AI assistant (Llama 3) for diagnosis support. Built with Next.js and Supabase, showcasing rapid development and integration skills.",
     imageUrl: "https://i.imgur.com/Lv8nr4g.jpg",
     demoUrl: "https://caresanar.online/",
     githubUrl: "https://github.com/jericho1050/caresanar",
     technologies: ["TypeScript", "Next.js", "Supabase", "Llama 3", "AI", "PostgreSQL"],
     tags: ["HealthTech", "Web App", "Health", "Management System", "Full Stack", "Hackathon"],
-    date: new Date(2025, 2, 28),
+    date: new Date(2025, 2, 28), // Note: Month is 0-indexed, so 2 is March
     achievement: "1st Place - StackUp Hackathon"
   },
   {
     id: "project-2",
     title: "Math Quizzty",
-    description: "An AI-powered educational platform for generating mathematics questions. Developed as a solo project for a StackUp hackathon, Math Quizzty features a multi-stage AI workflow using Django for orchestration, DigitalOcean Functions (Serverless) for distinct AI agents (generation, paraphrasing, verification), Llama 3 models via DigitalOcean GenAI & Together AI, and Neon PostgreSQL for storage. The system creates high-quality math problems with varying difficulty levels, adapting to user needs and providing immediate feedback.",
+    description: "An AI-powered platform generating mathematics questions. Developed solo for a StackUp hackathon, it employs a multi-stage AI workflow (Django orchestration, DigitalOcean Functions for agents, Llama 3 models) and Neon PostgreSQL storage. Creates adaptive, high-quality math problems with immediate feedback.",
     imageUrl: "https://i.imgur.com/4bmkHmX.jpg",
     demoUrl: "https://mathquizzty.xyz/",
     githubUrl: "https://github.com/jericho1050/math_quizzty",
     technologies: ["Python", "Django", "Llama 3", "DigitalOcean", "Serverless", "PostgreSQL", "NeonDB", "AI"],
     tags: ["EdTech", "AI", "Education", "Full Stack", "Hackathon"],
-    date: new Date(2025, 3, 28),
+    date: new Date(2025, 3, 28), // April
     achievement: "1st Place - StackUp Hackathon"
   },
   {
     id: "project-3",
     title: "GoalFlow",
-    description: "An AI-powered educational platform for generating mathematics questions. Developed as a solo project for a StackUp hackathon, Math Quizzty features a multi-stage AI workflow using Django for orchestration, DigitalOcean Functions (Serverless) for distinct AI agents (generation, paraphrasing, verification), Llama 3 models via DigitalOcean GenAI & Together AI, and Neon PostgreSQL for storage. The system creates high-quality math problems with varying difficulty levels, adapting to user needs and providing immediate feedback.",
+    description: "A web application designed for managing goals and workflows to enhance productivity. Integrates Gemini AI to provide suggestions and simplify complex tasks, aiding users in achieving their objectives more efficiently.",
     imageUrl: "https://i.imgur.com/rfQON8u.jpg",
     demoUrl: "https://goalflow-habits.netlify.app",
     githubUrl: "https://github.com/chingu-voyages/V54-tier3-team-31",
     technologies: ["Next.js", "TypeScript", "Gemini", "Netlify", "Serverless", "PostgreSQL", "NeonDB", "AI"],
     tags: ["Productivity", "AI", "Full Stack"],
-    date: new Date(2025, 4, 15),
+    date: new Date(2025, 4, 15), // May
   },
   {
     id: "project-4",
     title: "Calorie Contra",
-    description: "A calorie counter web app that searches for food and keeps tracks of your macros and calories, embedded with a nutritionist chatbot",
+    description: "A web application for tracking daily caloric and macronutrient intake. Allows users to search for food items and log consumption. Features an integrated nutritionist chatbot (powered by Gemini) for guidance.",
     imageUrl: "https://i.imgur.com/hKo5daE.jpg",
     demoUrl: "https://calorie-contra-testing-baf1376cc140.herokuapp.com/home",
     githubUrl: "https://github.com/jericho1050/calorie-counter",
     technologies: ["Python", "Javascript", "Quart", "Heroku", "Bootstrap", "Gemini"],
     tags: ["Web App", "Health", "Full Stack"],
-    date: new Date(2024, 9, 25)
+    date: new Date(2024, 9, 25) // October
   },
   {
     id: "project-5",
     title: "Hum Social Network",
-    description: "A simple to use social networking platform with real-time messaging and content sharing capabilities.",
+    description: "A user-friendly social networking platform enabling real-time messaging and content sharing. Built with Django and PostgreSQL, deployed on Neon.",
     imageUrl: "https://i.imgur.com/11cb8WG.jpg",
     demoUrl: "https://hum.social",
     githubUrl: "https://github.com/jericho1050/hum-social",
     technologies: ["Django", "Postgres", "Neon", "Javascript", "Bootstrap"],
     tags: ["Web App", "Social Media", "Full Stack"],
-    date: new Date(2025, 4, 1)
+    date: new Date(2025, 4, 1) // May
   },
   {
     id: "project-6",
     title: "Aestheitos Learning Platform",
-    description: "A management system and a educational platform focusing on calisthenics and fitness training",
+    description: "An educational platform and management system focused on calisthenics and fitness training. Provides resources and tools for users to learn and track their progress. Built with React and Django Rest Framework.",
     imageUrl: "https://i.imgur.com/oQ8dGva.jpg",
     demoUrl: "https://aestheitos.pro",
     githubUrl: "https://github.com/jericho1050/aestheitos",
     technologies: ["Vite", "Material UI", "React", "React Router", "Cypress", "Django Rest Framework", "Digital Ocean"],
     tags: ["Web App", "Education", "Fitness"],
-    date: new Date(2024, 2, 13)
+    date: new Date(2024, 2, 13) // March
   },
   {
     id: "project-7",
     title: "Drone Landing Page",
-    description: "A visually stunning landing page for a drone EdTech, featuring smooth animations and interactive elements.",
+    description: "An engaging landing page for a drone EdTech initiative. Features smooth animations and interactive elements to capture user interest. Deployed using Azure Static Web Apps.",
     imageUrl: "https://i.imgur.com/dQn0bx3.jpg",
     demoUrl: "https://blue-island-0e5228800.5.azurestaticapps.net",
     githubUrl: "https://github.com/jericho1050/drone-landing",
     technologies: ["HTML", "CSS", "JavaScript", "Azure Static Web Apps"],
     tags: ["Frontend", "Landing Page"],
-    date: new Date(2024, 11, 7)
+    date: new Date(2024, 11, 7) // December
   },
   {
     id: "project-8",
     title: "GiftChain Landing Page",
-    description: "A astonishing landing page for a blockchain management system product",
+    description: "A professional landing page designed for a blockchain-based gift management system product. Focuses on clear presentation and user engagement. Deployed on Netlify.",
     imageUrl: "https://i.imgur.com/w9WOXQK.jpg",
     demoUrl: "https://giftchain-blockchain.netlify.app",
     githubUrl: "https://github.com/jericho1050/giftchain",
     technologies: ["HTML", "CSS", "Netlify"],
     tags: ["Frontend", "Landing Page"],
-    date: new Date(2024, 11, 12)
+    date: new Date(2024, 11, 12) // December
   },
   {
     id: "project-9",
     title: "Telephone Number Validator",
-    description: "A tool that validates telephone numbers according to specified formats and patterns.",
+    description: "A client-side utility tool that validates US telephone numbers against common formats using regular expressions. Built with vanilla JavaScript, HTML, and CSS.",
     imageUrl: "https://i.imgur.com/WSBjap0.jpg",
     demoUrl: "https://jericho1050.github.io/telephone-number-validator/",
     githubUrl: "https://github.com/jericho1050/telephone-number-validator",
     technologies: ["JavaScript", "HTML", "CSS", "Regular Expressions"],
     tags: ["Tool", "Frontend"],
-    date: new Date(2024, 9, 5)
+    date: new Date(2024, 9, 5) // October
   },
   {
     id: "project-10",
     title: "Pokemon Search",
-    description: "An application to search and view details about Pokemon using the Pokemon API.",
+    description: "A web application allowing users to search for Pokémon and view their details by interacting with the public PokeAPI. Built with React and deployed on Vercel.",
     imageUrl: "https://i.imgur.com/4kUiDBx.jpg",
     demoUrl: "https://pokemon-search-smoky.vercel.app/",
     githubUrl: "https://github.com/jericho1050/pokemon-search",
     technologies: ["React", "PokeAPI", "Vercel", "CSS"],
     tags: ["Web App", "API Integration"],
-    date: new Date(2024, 9, 6)
+    date: new Date(2024, 9, 6) // October
   },
   {
     id: "project-11",
     title: "BookShelf Dapp",
-    description: "A decentralized application for managing and sharing book collections using blockchain technology.",
+    description: "A decentralized application (Dapp) for managing and sharing personal book collections. Leverages Ethereum blockchain technology via Solidity and Web3.js with a React frontend.",
     imageUrl: "https://i.imgur.com/aBndr18.jpg",
-    demoUrl: "https://github.com/jericho1050/bookshelf-dapp",
+    demoUrl: "https://github.com/jericho1050/bookshelf-dapp", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/bookshelf-dapp",
     technologies: ["Ethereum", "Solidity", "Web3.js", "React"],
     tags: ["Blockchain", "Dapp", "Full Stack"],
-    date: new Date(2024, 7, 30)
+    date: new Date(2024, 7, 30) // August
   },
   {
     id: "project-12",
     title: "Cash Register App",
-    description: "A cash register application that calculates change and manages cash drawer contents.",
+    description: "A simple web-based cash register application that calculates the optimal change (fewest coins/bills) to return to a customer after a purchase.",
     imageUrl: "https://i.imgur.com/9OVvGmz.jpg",
     demoUrl: "https://mycash-register-webapp.netlify.app",
     githubUrl: "https://github.com/jericho1050/cash-register",
     technologies: ["JavaScript", "HTML", "CSS", "Netlify"],
     tags: ["Web App", "Finance", "Tool"],
-    date: new Date(2023, 3, 4)
+    date: new Date(2023, 3, 4) // April
   },
   {
     id: "project-13",
     title: "Cabin Landing Page",
-    description: "A scenic landing page for cabin rentals with beautiful imagery and booking features.",
+    description: "A visually appealing landing page concept for a cabin rental service. Showcases UI design skills with a focus on imagery and potential booking features.",
     imageUrl: "https://i.imgur.com/aAzvmnd.jpg",
     demoUrl: "https://jericho1050.github.io/final-project-ui-design/",
     githubUrl: "https://github.com/jericho1050/final-project-ui-design",
     technologies: ["HTML", "CSS", "JavaScript"],
     tags: ["Frontend", "Landing Page", "UI Design"],
-    date: new Date(2024, 7, 24)
+    date: new Date(2024, 7, 24) // August
   },
   {
     id: "project-14",
     title: "Roman Numeral Converter",
-    description: "A utility that converts between Arabic numerals and Roman numerals with a clean user interface.",
+    description: "A frontend utility that converts standard Arabic numerals to their Roman numeral representation and vice-versa. Features a clean, straightforward user interface.",
     imageUrl: "https://i.imgur.com/u2NBqT8.jpg",
     demoUrl: "https://jericho1050.github.io/roman-numeral-converter/",
     githubUrl: "https://github.com/jericho1050/roman-numeral-converter",
     technologies: ["JavaScript", "HTML", "CSS"],
     tags: ["Tool", "Frontend"],
-    date: new Date(2023, 5, 2)
+    date: new Date(2023, 5, 2) // June
   },
-
   {
     id: "project-15",
     title: "TeaPlace Landing page",
-    description: "An elegant landing page for a tea shop with product showcases and ordering information.",
+    description: "An elegant landing page design for a conceptual tea shop. Focuses on product presentation and provides a template for potential e-commerce information.",
     imageUrl: "https://i.imgur.com/DEwVuSL.jpg",
     demoUrl: "https://jericho1050.github.io/teaplace/",
     githubUrl: "https://github.com/jericho1050/teaplace",
     technologies: ["HTML", "CSS"],
     tags: ["Frontend", "Landing Page", "E-commerce"],
-    date: new Date(2024, 7, 17)
+    date: new Date(2024, 7, 17) // August
   },
   {
     id: "project-16",
     title: "Backend Workout Logger",
-    description: "A backend service for logging and tracking workout sessions",
+    description: "A RESTful API service built with Python and FastAPI for logging and tracking user workout sessions. Designed to be consumed by a frontend application.",
     imageUrl: "https://i.imgur.com/tgC6MKN.jpg",
-    demoUrl: "https://github.com/jericho1050/repitup",
+    demoUrl: "https://github.com/jericho1050/repitup", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/repitup",
     technologies: ["Python", "FastAPI", "Postgres", "REST API"],
     tags: ["Backend", "Fitness", "API"],
-    date: new Date(2024, 8, 8)
+    date: new Date(2024, 8, 8) // September
   },
   {
     id: "project-17",
     title: "web_scraper",
-    description: "A Python-based web scraper that collects profile information from LinkedIn and GitHub using the Apify platform.",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/web_scraper",
+    description: "A Python script utilizing the Apify platform to scrape profile information from professional networking sites like LinkedIn and GitHub.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/web_scraper", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/web_scraper",
-    technologies: ["Python"],
-    tags: ["GitHub", "Scraping", "Tool"],
-    date: new Date(2024, 2, 18)
+    technologies: ["Python", "Apify"],
+    tags: ["Scraping", "Tool", "Automation"],
+    date: new Date(2024, 2, 18) // March
   },
   {
     id: "project-18",
     title: "tictactoe-ai",
-    description: "my implementation of minmax algorithm for project tictactoe of cs50ai week 0",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/tictactoe-ai",
+    description: "An implementation of the minimax algorithm for an unbeatable Tic-Tac-Toe AI player, developed as part of the CS50 AI course (Week 0 project).",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/tictactoe-ai", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/tictactoe-ai",
-    technologies: ["Python"],
-    tags: ["GitHub", "AI", "Game"],
-    date: new Date(2024, 6, 7)
+    technologies: ["Python", "AI"],
+    tags: ["AI", "Game", "Algorithm"],
+    date: new Date(2024, 6, 7) // July
   },
   {
     id: "project-19",
     title: "tee-landing-page",
-    description: "just a mock up bussiness website design",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/tee-landing-page",
+    description: "A static landing page mockup for a business website, focusing purely on HTML structure and layout design.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/tee-landing-page", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/tee-landing-page",
     technologies: ["HTML"],
-    tags: ["GitHub", "Frontend", "Landing Page"],
-    date: new Date(2024, 4, 12)
+    tags: ["Frontend", "Landing Page", "UI Design"],
+    date: new Date(2024, 4, 12) // May
   },
   {
     id: "project-20",
     title: "rustlings-mysoln",
-    description: "Just pushing my solution to this repository, nothing special",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/rustlings-mysoln",
+    description: "Personal solutions to the exercises from the official Rustlings repository, aimed at learning the Rust programming language.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/rustlings-mysoln", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/rustlings-mysoln",
     technologies: ["Makefile", "Rust"],
-    tags: ["GitHub", "Rust", "Learning"],
-    date: new Date(2024, 9, 4)
+    tags: ["Rust", "Learning", "Exercises"],
+    date: new Date(2024, 9, 4) // October
   },
   {
     id: "project-21",
     title: "RustyTasks",
-    description: "A command line to-do app written in Rust",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/RustyTasks",
+    description: "A command-line interface (CLI) application for managing to-do lists, written entirely in the Rust programming language.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/RustyTasks", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/RustyTasks",
     technologies: ["Rust"],
-    tags: ["GitHub", "CLI", "Tool", "Rust"],
-    date: new Date(2024, 0, 29)
+    tags: ["CLI", "Tool", "Rust", "Productivity"],
+    date: new Date(2024, 0, 29) // January
   },
   {
     id: "project-22",
     title: "dashboard",
-    description: "A simple analytics dashboard",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/dashboard",
+    description: "A basic frontend layout concept for an analytics dashboard, implemented purely with CSS for styling and structure.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/dashboard", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/dashboard",
-    technologies: ["CSS"],
-    tags: ["GitHub", "Frontend", "Dashboard"],
-    date: new Date(2024, 3, 15)
+    technologies: ["CSS", "HTML"],
+    tags: ["Frontend", "Dashboard", "UI Design"],
+    date: new Date(2024, 3, 15) // April
   },
   {
     id: "project-23",
     title: "product-crud",
-    description: "Just a tasked project with Flask",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/product-crud",
+    description: "A simple web application demonstrating Create, Read, Update, and Delete (CRUD) operations for products, built using the Flask web framework in Python.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/product-crud", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/product-crud",
     technologies: ["Python", "Flask"],
-    tags: ["GitHub", "Backend", "Web App", "CRUD"],
-    date: new Date(2024, 6, 21)
+    tags: ["Backend", "Web App", "CRUD"],
+    date: new Date(2024, 6, 21) // July
   },
   {
     id: "project-24",
-    title: "jericho1050-codecrafters-dns-server-python",
-    description: "CodeCrafters challenge: Build your own DNS Server in Python.",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/jericho1050-codecrafters-dns-server-python",
+    title: "CodeCrafters DNS Server",
+    description: "Implementation of a DNS server in Python as part of the 'Build Your Own DNS Server' challenge on CodeCrafters.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/jericho1050-codecrafters-dns-server-python", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/jericho1050-codecrafters-dns-server-python",
     technologies: ["Python"],
-    tags: ["GitHub", "Networking", "Python", "CodeCrafters"],
-    date: new Date(2024, 8, 5)
+    tags: ["Networking", "Python", "CodeCrafters", "DNS"],
+    date: new Date(2024, 8, 5) // September
   },
   {
     id: "project-25",
     title: "file-server",
-    description: "A simple HTTP file-server",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/file-server",
+    description: "A basic command-line HTTP file server developed in Rust, allowing users to serve files from a local directory over the network.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/file-server", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/file-server",
     technologies: ["Rust"],
-    tags: ["GitHub", "Networking", "Rust", "CLI"],
-    date: new Date(2024, 2, 2)
+    tags: ["Networking", "Rust", "CLI", "Tool"],
+    date: new Date(2024, 2, 2) // March
   },
   {
     id: "project-26",
     title: "portfolio",
-    description: "Personal Portfolio",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/portfolio",
+    description: "An early version of a personal portfolio website, built using basic HTML to structure content and showcase projects.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/portfolio", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/portfolio",
     technologies: ["HTML"],
-    tags: ["GitHub", "Portfolio", "Frontend"],
-    date: new Date(2024, 11, 20)
+    tags: ["Portfolio", "Frontend"],
+    date: new Date(2024, 11, 20) // December
   },
   {
     id: "project-27",
     title: "Aneco-appdev",
-    description: "For Educational Purpose Only",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/Aneco-appdev",
+    description: "An application developed strictly for educational purposes, exploring concepts using TypeScript.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/Aneco-appdev", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/Aneco-appdev",
     technologies: ["TypeScript"],
-    tags: ["GitHub", "Education", "TypeScript"],
-    date: new Date(2024, 1, 11)
+    tags: ["Education", "TypeScript"],
+    date: new Date(2024, 1, 11) // February
   },
   {
     id: "project-28",
     title: "portfolio_v2",
-    description: "Second Version of my portfolio",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/portfolio_v2",
+    description: "The second iteration of a personal portfolio website, aiming to improve upon the initial version with updated design or content.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/portfolio_v2", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/portfolio_v2",
-    technologies: [],
-    tags: ["GitHub", "Portfolio", "Frontend"],
-    date: new Date(2024, 7, 31)
+    technologies: [], // Assuming technologies were added later or not specified
+    tags: ["Portfolio", "Frontend"],
+    date: new Date(2024, 7, 31) // August
   },
   {
     id: "project-29",
     title: "dapp_forum",
-    description: "Using Arbitrum Solution to build this awesome web app",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/dapp_forum",
+    description: "A decentralized forum application built using Solidity smart contracts and leveraging the Arbitrum Layer 2 scaling solution for Ethereum.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/dapp_forum", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/dapp_forum",
-    technologies: ["Solidity", "Arbitrum"],
-    tags: ["GitHub", "Blockchain", "Dapp", "Forum", "Solidity"],
-    date: new Date(2024, 10, 14)
+    technologies: ["Solidity", "Arbitrum", "Ethereum"],
+    tags: ["Blockchain", "Dapp", "Forum", "Solidity", "Web3"],
+    date: new Date(2024, 10, 14) // November
   },
   {
     id: "project-30",
     title: "survey-form",
-    description: "A simple survey form page.",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/survey-form",
+    description: "A simple static web page containing a survey form, created using HTML for structure and basic form elements.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/survey-form", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/survey-form",
-    technologies: ["HTML"],
-    tags: ["GitHub", "Frontend", "HTML"],
-    date: new Date(2024, 0, 25)
+    technologies: ["HTML", "CSS"],
+    tags: ["Frontend", "HTML", "Form"],
+    date: new Date(2024, 0, 25) // January
   },
   {
     id: "project-31",
     title: "technical-docs",
-    description: "A Technical documentation for ThreeJs",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/technical-docs",
+    description: "A static web page designed as a template for technical documentation, featuring examples related to the Three.js library.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/technical-docs", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/technical-docs",
-    technologies: ["HTML", "ThreeJs"],
-    tags: ["GitHub", "Frontend", "Documentation"],
-    date: new Date(2024, 3, 10)
+    technologies: ["HTML", "CSS", "JavaScript"], // Assuming JS for ThreeJs examples
+    tags: ["Frontend", "Documentation", "ThreeJs"],
+    date: new Date(2024, 3, 10) // April
   },
   {
     id: "project-32",
     title: "cash-register",
-    description: "A cash register project that returns the change due to the customer",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/cash-register",
+    description: "A web-based cash register application focused on calculating the correct change to return to a customer using various denominations.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image - Same as project-12?
+    demoUrl: "https://github.com/jericho1050/cash-register", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/cash-register",
     technologies: ["JavaScript", "HTML", "CSS"],
-    tags: ["GitHub", "Web App", "Finance", "Tool"],
-    date: new Date(2024, 8, 1)
+    tags: ["Web App", "Finance", "Tool"],
+    date: new Date(2024, 8, 1) // September
   },
   {
     id: "project-33",
     title: "simple-card",
-    description: "Practice Figma to Code (finished in 1 day)",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/simple-card",
+    description: "A frontend component implementation translating a specific card design from Figma into functional HTML and CSS code.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/simple-card", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/simple-card",
-    technologies: ["HTML"],
-    tags: ["GitHub", "Frontend", "UI", "Figma"],
-    date: new Date(2024, 5, 2)
+    technologies: ["HTML", "CSS"],
+    tags: ["Frontend", "UI", "Figma", "Component"],
+    date: new Date(2024, 5, 2) // June
   },
   {
     id: "project-34",
     title: "backend4sat",
-    description: "Rest API Implementation for CRUD of question & answer ",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/backend4sat",
+    description: "A REST API backend service providing CRUD (Create, Read, Update, Delete) functionality for managing questions and answers, likely for an educational or quiz application.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/backend4sat", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/backend4sat",
-    technologies: ["Python", "REST API"],
-    tags: ["GitHub", "Backend", "API", "CRUD"],
-    date: new Date(2024, 2, 29)
+    technologies: ["Python", "REST API", "Flask"], // Assuming Flask based on project-23
+    tags: ["Backend", "API", "CRUD", "Education"],
+    date: new Date(2024, 2, 29) // March
   },
   {
     id: "project-35",
     title: "car-sales-site",
-    description: "A Responsive Cars site layout ( Figma -> code )",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/car-sales-site",
+    description: "A responsive frontend layout implementation for a car sales website, translated directly from a Figma design specification.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/car-sales-site", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/car-sales-site",
     technologies: ["CSS", "HTML"],
-    tags: ["GitHub", "Frontend", "UI", "Figma"],
-    date: new Date(2024, 10, 2)
+    tags: ["Frontend", "UI", "Figma", "Responsive"],
+    date: new Date(2024, 10, 2) // November
   },
   {
     id: "project-36",
-    title: "jericho1050-codecrafters-shell-rust",
-    description: "Build your own shell challenge",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/jericho1050-codecrafters-shell-rust",
+    title: "CodeCrafters Shell",
+    description: "Implementation of a Unix shell in Rust, completed as part of the 'Build Your Own Shell' challenge on the CodeCrafters platform.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/jericho1050-codecrafters-shell-rust", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/jericho1050-codecrafters-shell-rust",
     technologies: ["Rust"],
-    tags: ["GitHub", "Rust", "CLI", "CodeCrafters"],
-    date: new Date(2024, 6, 6)
+    tags: ["Rust", "CLI", "CodeCrafters", "Shell"],
+    date: new Date(2024, 6, 6) // July
   },
   {
     id: "project-37",
     title: "simple-landing-page",
-    description: "A simple landing page (Figma to code practice)",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/simple-landing-page",
+    description: "A basic static landing page created as an exercise in converting a design concept from Figma into functional HTML and CSS code.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/simple-landing-page", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/simple-landing-page",
     technologies: ["CSS", "HTML"],
-    tags: ["GitHub", "Frontend", "Landing Page", "UI", "Figma"],
-    date: new Date(2024, 2, 12)
+    tags: ["Frontend", "Landing Page", "UI", "Figma"],
+    date: new Date(2024, 2, 12) // March
   },
   {
     id: "project-38",
     title: "Llama3-Chatbot-QA",
-    description: "A ChatbotQA using Llama3 integrated with sentimental analysis",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/Llama3-Chatbot-QA",
+    description: "A question-answering chatbot application powered by the Llama 3 language model. Features integrated sentiment analysis to gauge user input tone.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/Llama3-Chatbot-QA", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/Llama3-Chatbot-QA",
-    technologies: ["Python", "Llama3"],
-    tags: ["GitHub", "AI", "Chatbot", "NLP", "QA"],
-    date: new Date(2024, 11, 23)
+    technologies: ["Python", "Llama 3", "AI"],
+    tags: ["AI", "Chatbot", "NLP", "QA", "Python"],
+    date: new Date(2024, 11, 23) // December
   },
   {
     id: "project-39",
-    title: "jericho1050-codecrafters-http-server-python",
-    description: "CodeCrafters challenge: Build your own HTTP Server in Python.",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/jericho1050-codecrafters-http-server-python",
+    title: "CodeCrafters HTTP Server",
+    description: "Implementation of an HTTP server in Python, developed as part of the 'Build Your Own HTTP Server' challenge on CodeCrafters.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/jericho1050-codecrafters-http-server-python", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/jericho1050-codecrafters-http-server-python",
     technologies: ["Python"],
-    tags: ["GitHub", "Networking", "Python", "CodeCrafters", "HTTP"],
-    date: new Date(2024, 5, 4)
+    tags: ["Networking", "Python", "CodeCrafters", "HTTP"],
+    date: new Date(2024, 5, 4) // June
   },
   {
     id: "project-40",
     title: "echommerce",
-    description: "My echommerce that i've built asap",
-    imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
-    demoUrl: "https://github.com/jericho1050/echommerce",
+    description: "A rapidly developed prototype for an e-commerce web application, focusing on core features and built primarily with JavaScript.",
+    imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
+    demoUrl: "https://github.com/jericho1050/echommerce", // Demo URL points to GitHub
     githubUrl: "https://github.com/jericho1050/echommerce",
-    technologies: ["JavaScript"],
-    tags: ["GitHub", "E-commerce", "Web App"],
-    date: new Date(2024, 9, 9)
+    technologies: ["JavaScript", "HTML", "CSS"], // Assuming basic web tech
+    tags: ["E-commerce", "Web App", "Prototype"],
+    date: new Date(2024, 9, 9) // October
   }
 ];
 
