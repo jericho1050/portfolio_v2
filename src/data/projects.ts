@@ -38,6 +38,17 @@ export const projects: Project[] = [
   },
   {
     id: "project-3",
+    title: "GoalFlow",
+    description: "An AI-powered educational platform for generating mathematics questions. Developed as a solo project for a StackUp hackathon, Math Quizzty features a multi-stage AI workflow using Django for orchestration, DigitalOcean Functions (Serverless) for distinct AI agents (generation, paraphrasing, verification), Llama 3 models via DigitalOcean GenAI & Together AI, and Neon PostgreSQL for storage. The system creates high-quality math problems with varying difficulty levels, adapting to user needs and providing immediate feedback.",
+    imageUrl: "https://i.imgur.com/rfQON8u.jpg",
+    demoUrl: "https://goalflow-habits.netlify.app",
+    githubUrl: "https://github.com/chingu-voyages/V54-tier3-team-31",
+    technologies: ["Next.js", "TypeScript", "Gemini", "Netlify", "Serverless", "PostgreSQL", "NeonDB", "AI"],
+    tags: ["Productivity", "AI", "Full Stack"],
+    date: new Date(2025, 4, 15),
+  },
+  {
+    id: "project-4",
     title: "Calorie Contra",
     description: "A calorie counter web app that searches for food and keeps tracks of your macros and calories, embedded with a nutritionist chatbot",
     imageUrl: "https://i.imgur.com/hKo5daE.jpg",
@@ -48,7 +59,7 @@ export const projects: Project[] = [
     date: new Date(2024, 9, 25)
   },
   {
-    id: "project-4",
+    id: "project-5",
     title: "Hum Social Network",
     description: "A simple to use social networking platform with real-time messaging and content sharing capabilities.",
     imageUrl: "https://i.imgur.com/11cb8WG.jpg",
@@ -59,7 +70,7 @@ export const projects: Project[] = [
     date: new Date(2025, 4, 1)
   },
   {
-    id: "project-5",
+    id: "project-6",
     title: "Aestheitos Learning Platform",
     description: "A management system and a educational platform focusing on calisthenics and fitness training",
     imageUrl: "https://i.imgur.com/oQ8dGva.jpg",
@@ -70,9 +81,9 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 13)
   },
   {
-    id: "project-6",
+    id: "project-7",
     title: "Drone Landing Page",
-    description: "A visually stunning landing page for a drone product, featuring smooth animations and interactive elements.",
+    description: "A visually stunning landing page for a drone EdTech, featuring smooth animations and interactive elements.",
     imageUrl: "https://i.imgur.com/dQn0bx3.jpg",
     demoUrl: "https://blue-island-0e5228800.5.azurestaticapps.net",
     githubUrl: "https://github.com/jericho1050/drone-landing",
@@ -81,7 +92,7 @@ export const projects: Project[] = [
     date: new Date(2024, 11, 7)
   },
   {
-    id: "project-7",
+    id: "project-8",
     title: "GiftChain Landing Page",
     description: "A astonishing landing page for a blockchain management system product",
     imageUrl: "https://i.imgur.com/w9WOXQK.jpg",
@@ -92,7 +103,7 @@ export const projects: Project[] = [
     date: new Date(2024, 11, 12)
   },
   {
-    id: "project-8",
+    id: "project-9",
     title: "Telephone Number Validator",
     description: "A tool that validates telephone numbers according to specified formats and patterns.",
     imageUrl: "https://i.imgur.com/WSBjap0.jpg",
@@ -103,7 +114,7 @@ export const projects: Project[] = [
     date: new Date(2024, 9, 5)
   },
   {
-    id: "project-9",
+    id: "project-10",
     title: "Pokemon Search",
     description: "An application to search and view details about Pokemon using the Pokemon API.",
     imageUrl: "https://i.imgur.com/4kUiDBx.jpg",
@@ -114,7 +125,7 @@ export const projects: Project[] = [
     date: new Date(2024, 9, 6)
   },
   {
-    id: "project-10",
+    id: "project-11",
     title: "BookShelf Dapp",
     description: "A decentralized application for managing and sharing book collections using blockchain technology.",
     imageUrl: "https://i.imgur.com/aBndr18.jpg",
@@ -125,7 +136,7 @@ export const projects: Project[] = [
     date: new Date(2024, 7, 30)
   },
   {
-    id: "project-11",
+    id: "project-12",
     title: "Cash Register App",
     description: "A cash register application that calculates change and manages cash drawer contents.",
     imageUrl: "https://i.imgur.com/9OVvGmz.jpg",
@@ -136,7 +147,7 @@ export const projects: Project[] = [
     date: new Date(2023, 3, 4)
   },
   {
-    id: "project-12",
+    id: "project-13",
     title: "Cabin Landing Page",
     description: "A scenic landing page for cabin rentals with beautiful imagery and booking features.",
     imageUrl: "https://i.imgur.com/aAzvmnd.jpg",
@@ -147,7 +158,7 @@ export const projects: Project[] = [
     date: new Date(2024, 7, 24)
   },
   {
-    id: "project-13",
+    id: "project-14",
     title: "Roman Numeral Converter",
     description: "A utility that converts between Arabic numerals and Roman numerals with a clean user interface.",
     imageUrl: "https://i.imgur.com/u2NBqT8.jpg",
@@ -159,7 +170,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: "project-14",
+    id: "project-15",
     title: "TeaPlace Landing page",
     description: "An elegant landing page for a tea shop with product showcases and ordering information.",
     imageUrl: "https://i.imgur.com/DEwVuSL.jpg",
@@ -170,7 +181,7 @@ export const projects: Project[] = [
     date: new Date(2024, 7, 17)
   },
   {
-    id: "project-15",
+    id: "project-16",
     title: "Backend Workout Logger",
     description: "A backend service for logging and tracking workout sessions",
     imageUrl: "https://i.imgur.com/tgC6MKN.jpg",
@@ -181,7 +192,7 @@ export const projects: Project[] = [
     date: new Date(2024, 8, 8)
   },
   {
-    id: "project-16",
+    id: "project-17",
     title: "web_scraper",
     description: "A Python-based web scraper that collects profile information from LinkedIn and GitHub using the Apify platform.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -192,7 +203,7 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 18)
   },
   {
-    id: "project-17",
+    id: "project-18",
     title: "tictactoe-ai",
     description: "my implementation of minmax algorithm for project tictactoe of cs50ai week 0",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -203,7 +214,7 @@ export const projects: Project[] = [
     date: new Date(2024, 6, 7)
   },
   {
-    id: "project-18",
+    id: "project-19",
     title: "tee-landing-page",
     description: "just a mock up bussiness website design",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -214,7 +225,7 @@ export const projects: Project[] = [
     date: new Date(2024, 4, 12)
   },
   {
-    id: "project-19",
+    id: "project-20",
     title: "rustlings-mysoln",
     description: "Just pushing my solution to this repository, nothing special",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -258,7 +269,7 @@ export const projects: Project[] = [
     date: new Date(2024, 6, 21)
   },
   {
-    id: "project-25",
+    id: "project-24",
     title: "jericho1050-codecrafters-dns-server-python",
     description: "CodeCrafters challenge: Build your own DNS Server in Python.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -269,7 +280,7 @@ export const projects: Project[] = [
     date: new Date(2024, 8, 5)
   },
   {
-    id: "project-26",
+    id: "project-25",
     title: "file-server",
     description: "A simple HTTP file-server",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -280,7 +291,7 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 2)
   },
   {
-    id: "project-27",
+    id: "project-26",
     title: "portfolio",
     description: "Personal Portfolio",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -291,7 +302,7 @@ export const projects: Project[] = [
     date: new Date(2024, 11, 20)
   },
   {
-    id: "project-28",
+    id: "project-27",
     title: "Aneco-appdev",
     description: "For Educational Purpose Only",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -302,7 +313,7 @@ export const projects: Project[] = [
     date: new Date(2024, 1, 11)
   },
   {
-    id: "project-29",
+    id: "project-28",
     title: "portfolio_v2",
     description: "Second Version of my portfolio",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -313,7 +324,7 @@ export const projects: Project[] = [
     date: new Date(2024, 7, 31)
   },
   {
-    id: "project-30",
+    id: "project-29",
     title: "dapp_forum",
     description: "Using Arbitrum Solution to build this awesome web app",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -324,7 +335,7 @@ export const projects: Project[] = [
     date: new Date(2024, 10, 14)
   },
   {
-    id: "project-31",
+    id: "project-30",
     title: "survey-form",
     description: "A simple survey form page.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -335,7 +346,7 @@ export const projects: Project[] = [
     date: new Date(2024, 0, 25)
   },
   {
-    id: "project-32",
+    id: "project-31",
     title: "technical-docs",
     description: "A Technical documentation for ThreeJs",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -346,7 +357,7 @@ export const projects: Project[] = [
     date: new Date(2024, 3, 10)
   },
   {
-    id: "project-33",
+    id: "project-32",
     title: "cash-register",
     description: "A cash register project that returns the change due to the customer",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -357,7 +368,7 @@ export const projects: Project[] = [
     date: new Date(2024, 8, 1)
   },
   {
-    id: "project-34",
+    id: "project-33",
     title: "simple-card",
     description: "Practice Figma to Code (finished in 1 day)",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -368,7 +379,7 @@ export const projects: Project[] = [
     date: new Date(2024, 5, 2)
   },
   {
-    id: "project-35",
+    id: "project-34",
     title: "backend4sat",
     description: "Rest API Implementation for CRUD of question & answer ",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -379,7 +390,7 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 29)
   },
   {
-    id: "project-38",
+    id: "project-35",
     title: "car-sales-site",
     description: "A Responsive Cars site layout ( Figma -> code )",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -390,7 +401,7 @@ export const projects: Project[] = [
     date: new Date(2024, 10, 2)
   },
   {
-    id: "project-39",
+    id: "project-36",
     title: "jericho1050-codecrafters-shell-rust",
     description: "Build your own shell challenge",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -401,7 +412,7 @@ export const projects: Project[] = [
     date: new Date(2024, 6, 6)
   },
   {
-    id: "project-40",
+    id: "project-37",
     title: "simple-landing-page",
     description: "A simple landing page (Figma to code practice)",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -412,7 +423,7 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 12)
   },
   {
-    id: "project-42",
+    id: "project-38",
     title: "Llama3-Chatbot-QA",
     description: "A ChatbotQA using Llama3 integrated with sentimental analysis",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -423,7 +434,7 @@ export const projects: Project[] = [
     date: new Date(2024, 11, 23)
   },
   {
-    id: "project-43",
+    id: "project-39",
     title: "jericho1050-codecrafters-http-server-python",
     description: "CodeCrafters challenge: Build your own HTTP Server in Python.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
@@ -434,7 +445,7 @@ export const projects: Project[] = [
     date: new Date(2024, 5, 4)
   },
   {
-    id: "project-44",
+    id: "project-40",
     title: "echommerce",
     description: "My echommerce that i've built asap",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg",
