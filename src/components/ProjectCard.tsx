@@ -9,6 +9,11 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+  let badgeClassName = "bg-gradient-to-br from-amber-400 to-amber-600 text-white text-xs flex items-center gap-1 font-semibold shadow-lg px-2.5 py-1 border border-amber-700/50 rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl"; // Default gold style
+  if (project.achievement?.toLowerCase().includes("3rd place")) {
+    badgeClassName = "bg-gradient-to-br from-yellow-600 via-amber-700 to-yellow-800 text-yellow-100 text-xs flex items-center gap-1 font-semibold shadow-lg px-2.5 py-1 border border-yellow-900/50 rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl"; // Bronze style
+  }
+
   return (
     <div 
       className="glass-card rounded-xl overflow-hidden hover-scale animate-fade-in relative"
@@ -18,7 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <div className="absolute top-3 right-3 z-10">
           <Badge 
             variant="default" 
-            className="bg-gradient-to-br from-amber-400 to-amber-600 text-white text-xs flex items-center gap-1 font-semibold shadow-lg px-2.5 py-1 border border-amber-700/50 rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl"
+            className={badgeClassName}
           >
             <Award size={12} className="text-white" />
             {project.achievement}

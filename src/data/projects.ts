@@ -45,10 +45,23 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/chingu-voyages/V54-tier3-team-31",
     technologies: ["Next.js", "TypeScript", "Gemini", "Netlify", "Serverless", "PostgreSQL", "NeonDB", "AI"],
     tags: ["Productivity", "AI", "Full Stack"],
-    date: new Date(2025, 4, 15), // May
+    date: new Date(2025, 3, 15), // May
   },
   {
     id: "project-4",
+    title: "EnviroSight",
+    description: "A predictive environmental hazard mapper utilizing multi-source geolocation and chemical data. Built to analyze and visualize environmental risks, enabling proactive decision-making. Developed with TypeScript, emphasizing data integration and mapping capabilities.",
+    imageUrl: "https://i.imgur.com/DmNK3f3.jpg", // Replace with actual image
+    demoUrl: "https://envirosight.example.com/", // Replace with actual demo URL
+    githubUrl: "https://github.com/jericho1050/envirosight",
+    technologies: ["TypeScript", "Data Integration", "Geolocation", "Chemical Analysis"],
+    tags: ["Environment", "Hazard Prediction", "Geospatial", "Full Stack"],
+    date: new Date(2025, 3, 28), // May,
+    achievement: "3rd Place - StackUp Hackathon"
+
+  },
+  {
+    id: "project-5",
     title: "Calorie Contra",
     description: "A web application for tracking daily caloric and macronutrient intake. Allows users to search for food items and log consumption. Features an integrated nutritionist chatbot (powered by Gemini) for guidance.",
     imageUrl: "https://i.imgur.com/hKo5daE.jpg",
@@ -59,7 +72,7 @@ export const projects: Project[] = [
     date: new Date(2024, 9, 25) // October
   },
   {
-    id: "project-5",
+    id: "project-6",
     title: "Hum Social Network",
     description: "A user-friendly social networking platform enabling real-time messaging and content sharing. Built with Django and PostgreSQL, deployed on Neon.",
     imageUrl: "https://i.imgur.com/11cb8WG.jpg",
@@ -70,7 +83,7 @@ export const projects: Project[] = [
     date: new Date(2025, 4, 1) // May
   },
   {
-    id: "project-6",
+    id: "project-7",
     title: "Aestheitos Learning Platform",
     description: "An educational platform and management system focused on calisthenics and fitness training. Provides resources and tools for users to learn and track their progress. Built with React and Django Rest Framework.",
     imageUrl: "https://i.imgur.com/oQ8dGva.jpg",
@@ -81,7 +94,7 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 13) // March
   },
   {
-    id: "project-7",
+    id: "project-8",
     title: "Drone Landing Page",
     description: "An engaging landing page for a drone EdTech initiative. Features smooth animations and interactive elements to capture user interest. Deployed using Azure Static Web Apps.",
     imageUrl: "https://i.imgur.com/dQn0bx3.jpg",
@@ -92,7 +105,7 @@ export const projects: Project[] = [
     date: new Date(2024, 11, 7) // December
   },
   {
-    id: "project-8",
+    id: "project-9",
     title: "GiftChain Landing Page",
     description: "A professional landing page designed for a blockchain-based gift management system product. Focuses on clear presentation and user engagement. Deployed on Netlify.",
     imageUrl: "https://i.imgur.com/w9WOXQK.jpg",
@@ -103,7 +116,7 @@ export const projects: Project[] = [
     date: new Date(2024, 11, 12) // December
   },
   {
-    id: "project-9",
+    id: "project-10",
     title: "Telephone Number Validator",
     description: "A client-side utility tool that validates US telephone numbers against common formats using regular expressions. Built with vanilla JavaScript, HTML, and CSS.",
     imageUrl: "https://i.imgur.com/WSBjap0.jpg",
@@ -114,7 +127,7 @@ export const projects: Project[] = [
     date: new Date(2024, 9, 5) // October
   },
   {
-    id: "project-10",
+    id: "project-11",
     title: "Pokemon Search",
     description: "A web application allowing users to search for Pokémon and view their details by interacting with the public PokeAPI. Built with React and deployed on Vercel.",
     imageUrl: "https://i.imgur.com/4kUiDBx.jpg",
@@ -125,7 +138,7 @@ export const projects: Project[] = [
     date: new Date(2024, 9, 6) // October
   },
   {
-    id: "project-11",
+    id: "project-12",
     title: "BookShelf Dapp",
     description: "A decentralized application (Dapp) for managing and sharing personal book collections. Leverages Ethereum blockchain technology via Solidity and Web3.js with a React frontend.",
     imageUrl: "https://i.imgur.com/aBndr18.jpg",
@@ -136,7 +149,7 @@ export const projects: Project[] = [
     date: new Date(2024, 7, 30) // August
   },
   {
-    id: "project-12",
+    id: "project-13",
     title: "Cash Register App",
     description: "A simple web-based cash register application that calculates the optimal change (fewest coins/bills) to return to a customer after a purchase.",
     imageUrl: "https://i.imgur.com/9OVvGmz.jpg",
@@ -147,7 +160,7 @@ export const projects: Project[] = [
     date: new Date(2023, 3, 4) // April
   },
   {
-    id: "project-13",
+    id: "project-14",
     title: "Cabin Landing Page",
     description: "A visually appealing landing page concept for a cabin rental service. Showcases UI design skills with a focus on imagery and potential booking features.",
     imageUrl: "https://i.imgur.com/aAzvmnd.jpg",
@@ -158,7 +171,7 @@ export const projects: Project[] = [
     date: new Date(2024, 7, 24) // August
   },
   {
-    id: "project-14",
+    id: "project-15",
     title: "Roman Numeral Converter",
     description: "A frontend utility that converts standard Arabic numerals to their Roman numeral representation and vice-versa. Features a clean, straightforward user interface.",
     imageUrl: "https://i.imgur.com/u2NBqT8.jpg",
@@ -169,7 +182,7 @@ export const projects: Project[] = [
     date: new Date(2023, 5, 2) // June
   },
   {
-    id: "project-15",
+    id: "project-16",
     title: "TeaPlace Landing page",
     description: "An elegant landing page design for a conceptual tea shop. Focuses on product presentation and provides a template for potential e-commerce information.",
     imageUrl: "https://i.imgur.com/DEwVuSL.jpg",
@@ -180,7 +193,7 @@ export const projects: Project[] = [
     date: new Date(2024, 7, 17) // August
   },
   {
-    id: "project-16",
+    id: "project-17",
     title: "Backend Workout Logger",
     description: "A RESTful API service built with Python and FastAPI for logging and tracking user workout sessions. Designed to be consumed by a frontend application.",
     imageUrl: "https://i.imgur.com/tgC6MKN.jpg",
@@ -191,7 +204,7 @@ export const projects: Project[] = [
     date: new Date(2024, 8, 8) // September
   },
   {
-    id: "project-17",
+    id: "project-18",
     title: "web_scraper",
     description: "A Python script utilizing the Apify platform to scrape profile information from professional networking sites like LinkedIn and GitHub.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -202,7 +215,7 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 18) // March
   },
   {
-    id: "project-18",
+    id: "project-19",
     title: "tictactoe-ai",
     description: "An implementation of the minimax algorithm for an unbeatable Tic-Tac-Toe AI player, developed as part of the CS50 AI course (Week 0 project).",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -213,7 +226,7 @@ export const projects: Project[] = [
     date: new Date(2024, 6, 7) // July
   },
   {
-    id: "project-19",
+    id: "project-20",
     title: "tee-landing-page",
     description: "A static landing page mockup for a business website, focusing purely on HTML structure and layout design.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -224,7 +237,7 @@ export const projects: Project[] = [
     date: new Date(2024, 4, 12) // May
   },
   {
-    id: "project-20",
+    id: "project-21",
     title: "rustlings-mysoln",
     description: "Personal solutions to the exercises from the official Rustlings repository, aimed at learning the Rust programming language.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -235,7 +248,7 @@ export const projects: Project[] = [
     date: new Date(2024, 9, 4) // October
   },
   {
-    id: "project-21",
+    id: "project-22",
     title: "RustyTasks",
     description: "A command-line interface (CLI) application for managing to-do lists, written entirely in the Rust programming language.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -246,7 +259,7 @@ export const projects: Project[] = [
     date: new Date(2024, 0, 29) // January
   },
   {
-    id: "project-22",
+    id: "project-23",
     title: "dashboard",
     description: "A basic frontend layout concept for an analytics dashboard, implemented purely with CSS for styling and structure.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -257,7 +270,7 @@ export const projects: Project[] = [
     date: new Date(2024, 3, 15) // April
   },
   {
-    id: "project-23",
+    id: "project-24",
     title: "product-crud",
     description: "A simple web application demonstrating Create, Read, Update, and Delete (CRUD) operations for products, built using the Flask web framework in Python.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -268,7 +281,7 @@ export const projects: Project[] = [
     date: new Date(2024, 6, 21) // July
   },
   {
-    id: "project-24",
+    id: "project-25",
     title: "CodeCrafters DNS Server",
     description: "Implementation of a DNS server in Python as part of the 'Build Your Own DNS Server' challenge on CodeCrafters.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -279,7 +292,7 @@ export const projects: Project[] = [
     date: new Date(2024, 8, 5) // September
   },
   {
-    id: "project-25",
+    id: "project-26",
     title: "file-server",
     description: "A basic command-line HTTP file server developed in Rust, allowing users to serve files from a local directory over the network.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -290,7 +303,7 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 2) // March
   },
   {
-    id: "project-26",
+    id: "project-27",
     title: "portfolio",
     description: "An early version of a personal portfolio website, built using basic HTML to structure content and showcase projects.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -301,7 +314,7 @@ export const projects: Project[] = [
     date: new Date(2024, 11, 20) // December
   },
   {
-    id: "project-27",
+    id: "project-28",
     title: "Aneco-appdev",
     description: "An application developed strictly for educational purposes, exploring concepts using TypeScript.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -312,7 +325,7 @@ export const projects: Project[] = [
     date: new Date(2024, 1, 11) // February
   },
   {
-    id: "project-28",
+    id: "project-29",
     title: "portfolio_v2",
     description: "The second iteration of a personal portfolio website, aiming to improve upon the initial version with updated design or content.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -323,7 +336,7 @@ export const projects: Project[] = [
     date: new Date(2024, 7, 31) // August
   },
   {
-    id: "project-29",
+    id: "project-30",
     title: "dapp_forum",
     description: "A decentralized forum application built using Solidity smart contracts and leveraging the Arbitrum Layer 2 scaling solution for Ethereum.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -334,7 +347,7 @@ export const projects: Project[] = [
     date: new Date(2024, 10, 14) // November
   },
   {
-    id: "project-30",
+    id: "project-31",
     title: "survey-form",
     description: "A simple static web page containing a survey form, created using HTML for structure and basic form elements.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -345,7 +358,7 @@ export const projects: Project[] = [
     date: new Date(2024, 0, 25) // January
   },
   {
-    id: "project-31",
+    id: "project-32",
     title: "technical-docs",
     description: "A static web page designed as a template for technical documentation, featuring examples related to the Three.js library.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -356,7 +369,7 @@ export const projects: Project[] = [
     date: new Date(2024, 3, 10) // April
   },
   {
-    id: "project-32",
+    id: "project-33",
     title: "cash-register",
     description: "A web-based cash register application focused on calculating the correct change to return to a customer using various denominations.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image - Same as project-12?
@@ -367,7 +380,7 @@ export const projects: Project[] = [
     date: new Date(2024, 8, 1) // September
   },
   {
-    id: "project-33",
+    id: "project-34",
     title: "simple-card",
     description: "A frontend component implementation translating a specific card design from Figma into functional HTML and CSS code.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -378,7 +391,7 @@ export const projects: Project[] = [
     date: new Date(2024, 5, 2) // June
   },
   {
-    id: "project-34",
+    id: "project-35",
     title: "backend4sat",
     description: "A REST API backend service providing CRUD (Create, Read, Update, Delete) functionality for managing questions and answers, likely for an educational or quiz application.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -389,7 +402,7 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 29) // March
   },
   {
-    id: "project-35",
+    id: "project-36",
     title: "car-sales-site",
     description: "A responsive frontend layout implementation for a car sales website, translated directly from a Figma design specification.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -400,7 +413,7 @@ export const projects: Project[] = [
     date: new Date(2024, 10, 2) // November
   },
   {
-    id: "project-36",
+    id: "project-37",
     title: "CodeCrafters Shell",
     description: "Implementation of a Unix shell in Rust, completed as part of the 'Build Your Own Shell' challenge on the CodeCrafters platform.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -411,7 +424,7 @@ export const projects: Project[] = [
     date: new Date(2024, 6, 6) // July
   },
   {
-    id: "project-37",
+    id: "project-38",
     title: "simple-landing-page",
     description: "A basic static landing page created as an exercise in converting a design concept from Figma into functional HTML and CSS code.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -422,7 +435,7 @@ export const projects: Project[] = [
     date: new Date(2024, 2, 12) // March
   },
   {
-    id: "project-38",
+    id: "project-39",
     title: "Llama3-Chatbot-QA",
     description: "A question-answering chatbot application powered by the Llama 3 language model. Features integrated sentiment analysis to gauge user input tone.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -433,7 +446,7 @@ export const projects: Project[] = [
     date: new Date(2024, 11, 23) // December
   },
   {
-    id: "project-39",
+    id: "project-40",
     title: "CodeCrafters HTTP Server",
     description: "Implementation of an HTTP server in Python, developed as part of the 'Build Your Own HTTP Server' challenge on CodeCrafters.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
@@ -444,7 +457,7 @@ export const projects: Project[] = [
     date: new Date(2024, 5, 4) // June
   },
   {
-    id: "project-40",
+    id: "project-41",
     title: "echommerce",
     description: "A rapidly developed prototype for an e-commerce web application, focusing on core features and built primarily with JavaScript.",
     imageUrl: "https://i.imgur.com/6H7rc1M.jpg", // Generic Image
