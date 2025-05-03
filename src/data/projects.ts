@@ -52,7 +52,7 @@ export const projects: Project[] = [
     title: "EnviroSight",
     description: "A predictive environmental hazard mapper utilizing multi-source geolocation and chemical data. Built to analyze and visualize environmental risks, enabling proactive decision-making. Developed with TypeScript, emphasizing data integration and mapping capabilities.",
     imageUrl: "https://i.imgur.com/DmNK3f3.jpg", // Replace with actual image
-    demoUrl: "https://envirosight.example.com/", // Replace with actual demo URL
+    demoUrl: "https://envirosight.vercel.app/", // Replace with actual demo URL
     githubUrl: "https://github.com/jericho1050/envirosight",
     technologies: ["TypeScript", "Data Integration", "Geolocation", "Chemical Analysis"],
     tags: ["Environment", "Hazard Prediction", "Geospatial", "Full Stack"],
