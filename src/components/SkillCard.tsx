@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+
+import React from "react";
 import { Skill } from "../data/skills";
-import { Progress } from "./ui/progress";
 import { motion } from "framer-motion";
 // Import correct icon components from react-icons
 import { 
@@ -64,18 +64,6 @@ interface SkillCardProps {
 
 const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
   const [isHovered, setIsHovered] = useState(false);
-  
-  // Calculate the percentage for display
-  const percentage = skill.level * 20;
-  
-  // Define skill level label based on percentage
-  const getSkillLabel = (level: number) => {
-    if (level === 5) return "Expert";
-    if (level === 4) return "Advanced";
-    if (level === 3) return "Intermediate";
-    if (level === 2) return "Basic";
-    return "Beginner";
-  };
 
   // Get the appropriate icon component or fallback to first two letters
   const renderIcon = () => {
@@ -111,44 +99,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
         <div className="absolute inset-0 rounded-full border border-primary/30 animate-pulse-soft" />
       </div>
       
-      <h3 className="text-base md:text-lg font-display font-bold mb-2 text-center">{skill.name}</h3>
-      
-      <div className="mt-auto pt-4">
-        <div className="flex justify-between mb-1.5 text-xs">
-          <span className="font-medium text-muted-foreground">Proficiency</span>
-          <span className="font-medium text-primary">{percentage}%</span>
-        </div>
-        
-        <Progress 
-          value={percentage} 
-          className="h-2 bg-secondary/50" 
-        />
-        
-        <div className="flex justify-center mt-1 text-muted-foreground text-xs ">
-          <span className={`transition-colors duration-300 ${skill.level >= 3 ? "text-primary font-medium" : ""}`}>
-            {getSkillLabel(skill.level)}
-          </span>
-        </div>
-      </div>
-      
-      {/* Experience indicators */}
-      <div className="flex justify-center mt-3 space-x-1">
-        {[1, 2, 3, 4, 5].map((level) => (
-          <div 
-            key={level}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              level <= skill.level 
-                ? "bg-primary scale-100" 
-                : "bg-primary/20 scale-75"
-            } ${
-              isHovered && level <= skill.level ? "scale-125" : ""
-            }`}
-            style={{ 
-              transitionDelay: `${level * 50}ms`,
-            }}
-          />
-        ))}
-      </div>
+      <h3 className="text-base md:text-lg font-display font-bold text-center">{skill.name}</h3>
     </motion.div>
   );
 };
