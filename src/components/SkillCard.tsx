@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Skill } from "../data/skills";
 import { motion } from "framer-motion";
 // Import correct icon components from react-icons
